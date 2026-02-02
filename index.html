@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1></h1>
+      <p><strong>test</strong></p>
+      <input type="text" />
+    </div>
+  </body>
+  <script>
+    let message = "메세지를 입력해 주세요.";
+    const h1 = document.querySelector("h1");
+    const input = document.querySelector("input");
+    input.value = message;
+    h1.innerText = input.value;
+    input.addEventListener("input", (e) => {
+      console.log(e.currentTarget);
+      h1.innerText = input.value;
+    });
+  </script>
+</html>
