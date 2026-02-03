@@ -3,15 +3,15 @@ import { ref } from "vue";
 
 // [미션 1] 반응형 데이터 만들기
 // 1. 입력창의 값을 저장할 변수 (ref)
+const memoList = ref(["예약하기", "자료조사"]);
 // 2. 메모들을 담을 배열 (ref, 초기값으로 한두 개 넣어두기) : '예약하기', '자료 조사'
-const memoList = ref([]);
 const input = ref("");
+// [미션 2] 함수 만들기
+// 1. 메모 추가 함수: 배열에 추가하고 입력창 비우기
 function addMemo() {
   memoList.value.push(input.value);
   input.value = "";
 }
-// [미션 2] 함수 만들기
-// 1. 메모 추가 함수: 배열에 추가하고 입력창 비우기
 // 2. 메모 삭제 함수: Hint, splice 메소드 사용
 function delMemo(idx) {
   memoList.value.splice(idx, 1);
