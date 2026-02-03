@@ -25,6 +25,30 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("@/views/DirectiveBind.vue"),
     },
+    {
+      path: "/model",
+      name: "DirectiveModel",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("@/views/DirectiveModel.vue"),
+    },
+    {
+      path: "/on",
+      name: "DirectiveOn",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("@/views/DirectiveOn.vue"),
+    },
+    {
+      path: "/for",
+      name: "DirectiveFor",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("@/views/DirectiveFor.vue"),
+    },
   ],
 });
 
